@@ -4,6 +4,7 @@ export default function ImageCard({ image }) {
   const [spans, setSpans] = useState(0);
   const imageRef = useRef();
 
+
   useEffect(() => {
     imageRef.current.addEventListener("load", calcSpans());
 
@@ -13,6 +14,7 @@ export default function ImageCard({ image }) {
     const height = imageRef.current.clientHeight;
   
     const spans = Math.ceil(height / 10);
+
     setSpans(spans);
  
   };
